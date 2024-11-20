@@ -1,0 +1,146 @@
+title-text: ""
+desktop-image: "background.png"
+desktop-color: "#ffffff"
+terminal-font: "Terminus (TTF) Regular ${TERMINAL_FONT_SIZE}"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+
++ image {
+  file = "thinkpad_logo.png"
+  top = ${PADDING}
+  left = ${PADDING}
+}
++ image {
+  file = "lenovo_logo.png"
+  top = ${PADDING}
+  left = 100%-${LENOVO_LOGO_OFFSET}
+}
++ image {
+  file = "separator.png"
+  top = 100%-${BOTTOM_LINE_POS_OFFSET}
+  left = 0
+  width = 100%
+  height = ${BOTTOM_LINE_SIZE}
+}
+
++ progress_bar {
+  left = 50%-${MENU_WIDTH_HALF}
+  top = 79%-${PROGRESS_BAR_SIZE_HALF}
+  width = ${MENU_WIDTH}
+  height = ${PROGRESS_BAR_SIZE}
+
+  id = "__timeout__"
+  text = "@TIMEOUT_NOTIFICATION_SHORT@"
+
+  border_color = "white"
+  highlight_style = "progress_active_*.png"
+  bar_style = "progress_inactive_*.png"
+  font = "Roboto Regular ${PROGRESS_FONT_SIZE}"
+}
+
+
++ label {
+  font = "Roboto Regular ${HEADER_FONT_SIZE}"
+  left = 0
+  top = 4%+${HEADER_OFFSET_MIN}
+  width = 100%
+  color = "${LENOVO_PURPLE}"
+  align = "center"
+  text = "Select Boot Option"
+}
+
++ boot_menu {
+  left = 50%-${MENU_WIDTH_HALF}
+  top = 50%-${MENU_HEIGHT_HALF}
+  width = ${MENU_WIDTH}
+  height = ${MENU_HEIGHT}
+  item_font = "Roboto Regular ${MAIN_FONT_SIZE}"
+  item_color = "${TEXT_COLOR}"
+  selected_item_color = "${TEXT_COLOR}"
+  icon_width = ${ITEM_SIZE}
+  icon_height = ${ITEM_SIZE}
+  item_icon_space = 10
+  item_height = ${ITEM_SIZE}
+  item_padding = 20
+  item_spacing = 10
+  item_pixmap_style = "menu_inactive_*.png"
+  selected_item_pixmap_style = "menu_selected_*.png"
+}
+
+
++ label {
+  font = "Roboto Regular ${MAIN_FONT_SIZE}"
+  left = 0%
+  top = 100%-${BOTTOM_LABELS_POS_OFFSET}
+  width = 13%-5
+  color = "${LENOVO_BLUE}"
+  align = "right"
+  text = "↑↓"
+}
++ label {
+  font = "Roboto Regular ${MAIN_FONT_SIZE}"
+  left = 13%+5
+  top = 100%-${BOTTOM_LABELS_POS_OFFSET}
+  color = "${TEXT_COLOR}"
+  align = "left"
+  text = "Select"
+}
+
++ label {
+  font = "Roboto Regular ${MAIN_FONT_SIZE}"
+  left = 25%
+  top = 100%-${BOTTOM_LABELS_POS_OFFSET}
+  width = 10%-5
+  color = "${LENOVO_BLUE}"
+  align = "right"
+  text = "Enter"
+}
++ label {
+  font = "Roboto Regular ${MAIN_FONT_SIZE}"
+  left = 35%+5
+  top = 100%-${BOTTOM_LABELS_POS_OFFSET}
+  color = "${TEXT_COLOR}"
+  align = "left"
+  text = "Boot"
+}
+
++ label {
+  font = "Roboto Regular ${MAIN_FONT_SIZE}"
+  left = 48%
+  top = 100%-${BOTTOM_LABELS_POS_OFFSET}
+  width = 10%-5
+  color = "${LENOVO_BLUE}"
+  align = "right"
+  text = "E"
+}
++ label {
+  font = "Roboto Regular ${MAIN_FONT_SIZE}"
+  left = 58%+5
+  top = 100%-${BOTTOM_LABELS_POS_OFFSET}
+  color = "${TEXT_COLOR}"
+  align = "left"
+  text = "Options"
+}
+
++ label {
+  font = "Roboto Regular ${MAIN_FONT_SIZE}"
+  left = 70%
+  top = 100%-${BOTTOM_LABELS_POS_OFFSET}
+  width = 10%-5
+  color = "${LENOVO_BLUE}"
+  align = "right"
+  text = "C"
+}
++ label {
+  font = "Roboto Regular ${MAIN_FONT_SIZE}"
+  left = 80%+5
+  top = 100%-${BOTTOM_LABELS_POS_OFFSET}
+  color = "${TEXT_COLOR}"
+  align = "left"
+  text = "Command Line"
+}
+
+
